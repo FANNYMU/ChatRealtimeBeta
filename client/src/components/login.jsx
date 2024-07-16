@@ -18,23 +18,31 @@ function Login({ onLogin }) {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
+        <div className="flex flex-col items-center">
+            <h2 className="text-lg mb-4">Login</h2>
             <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Username"
+                className="px-4 py-2 mb-2 border border-gray-300 rounded-md"
             />
             <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
+                className="px-4 py-2 mb-4 border border-gray-300 rounded-md"
             />
-            <button onClick={handleLogin}>Login</button>
+            <button
+                onClick={handleLogin}
+                className="px-4 py-2 bg-blue-500 text-white rounded-md"
+            >
+                Login
+            </button>
         </div>
     );
 }
 
 export default Login;
+

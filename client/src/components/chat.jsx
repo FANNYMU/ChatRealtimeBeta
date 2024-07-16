@@ -43,18 +43,21 @@ function Chat({ username }) {
     };
 
     return (
-        <div>
-            <h2>Chat</h2>
-            <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type a message"
-            />
-            <button onClick={sendMessage}>Send</button>
-            <div>
+        <div className="flex flex-col items-center">
+            <h2 className="text-2xl mb-4">Chat</h2>
+            <div className="flex mb-4">
+                <input
+                    type="text"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Type a message"
+                    className="px-4 py-2 flex-1 border border-gray-300 rounded-md"
+                />
+                <button onClick={sendMessage} className="px-4 py-2 bg-blue-500 text-white rounded-md">Send</button>
+            </div>
+            <div className="space-y-2">
                 {messages.map((msg, index) => (
-                    <div key={index}>
+                    <div key={index} className="bg-gray-200 p-2 rounded-md">
                         <strong>{msg.username}:</strong> {msg.message}
                     </div>
                 ))}
