@@ -59,7 +59,7 @@ function Chat({ username }) {
             </div>
             <div className="space-y-2">
                 {messages.map((msg, index) => (
-                    <div key={index} className="bg-gray-200 p-2 rounded-md">
+                    <div key={index} className=" p-2 rounded-md">
                         <strong>{msg.username}:</strong> {msg.message}
                     </div>
                 ))}

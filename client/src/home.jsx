@@ -3,6 +3,7 @@ import Login from "./components/login";
 import Register from "./components/register";
 import Chat from "./components/chat";
 import "../css/app.min.css";
+import Darkmode from "./components/darkmode";
 
 function Home() {
   const [username, setUsername] = useState("");

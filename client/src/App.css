@@ -1,7 +1,4 @@
-body {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-}
+
 
 h1 {
   text-align: center;
@@ -31,4 +28,35 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+
+/* styles.css */
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --input-background-color: #fff;
+  --input-text-color: #000;
+}
+
+[data-theme='dark'] {
+  --background-color: rgb(48, 7, 102);
+  --text-color: #fff;
+  --input-background-color: #2a2a2a;
+  --input-text-color: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+
+input {
+  background-color: var(--input-background-color);
+  color: var(--input-text-color);
+  border: 1px solid var(--text-color);
+  padding: 8px;
+  border-radius: 4px;
 }
